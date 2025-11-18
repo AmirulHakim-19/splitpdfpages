@@ -62,7 +62,7 @@ for filename in os.listdir(input_folder):
             for i, page in enumerate(reader.pages):
                 writer = PdfWriter()
                 writer.add_page(page)
-                output_filename = f"{base_name}_page_{i+1}.pdf"
+                output_filename = f"{base_name}_page_{i+1:03d}.pdf"
                 output_path = os.path.join(target_subfolder, output_filename)
 
                 # avoid overwrite by incrementing suffix if exists
